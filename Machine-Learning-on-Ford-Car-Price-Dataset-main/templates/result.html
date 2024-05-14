@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <h2>Predicted Car Price: ₹<span id="predicted_price"></span></h2>
+    </div>
+
+    <script>
+        // Get the predicted price in dollars
+        var predictedPriceInDollars = {{ predicted_price }};
+
+        // Convert dollars to rupees (using a conversion rate of 1 USD = 75 INR)
+        var conversionRate = 75;
+        var predictedPriceInRupees = predictedPriceInDollars * conversionRate;
+
+        // Display the predicted price in rupees
+        document.getElementById("predicted_price").innerText = predictedPriceInRupees.toLocaleString('en-IN');
+    </script>
+</body>
+</html>

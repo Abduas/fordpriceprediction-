@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select,
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Ford Car Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="year">Year:</label>
+        <select id="year" name="year" required>
+            <option value="">Select Year</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <!-- Add more options as needed -->
+        </select>
+        
+        <label for="transmission">Transmission:</label>
+        <select id="transmission" name="transmission" required>
+            <option value="">Select Transmission</option>
+            <option value="0">Manual</option>
+            <option value="1">Automatic</option>
+            <option value="2">Semi-Auto</option>
+        </select>
+
+        <label for="mileage">Mileage:</label>
+        <select id="mileage" name="mileage" required>
+            <option value="">Select Mileage</option>
+            <option value="9">9</option>
+            <option value="19">19</option>
+            <option value="29">29</option>
+            <option value="39">39</option>
+            <option value="49">49</option>
+        </select><br><br>
+
+        <label for="fuelType">Fuel Type:</label>
+        <select id="fuelType" name="fuelType" required>
+            <option value="">Select Fuel Type</option>
+            <option value="0">Petrol</option>
+            <option value="1">Diesel</option>
+            <option value="2">Hybrid</option>
+            <option value="3">Electric</option>
+            <option value="4">Other</option>
+        </select>
+
+        <label for="tax">Tax:</label>
+        <select id="tax" name="tax" required>
+            <option value="">Select Tax</option>
+            <option value="0">0</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="150">150</option>
+            <option value="200">200</option>
+        </select>
+
+        <label for="mpg">MPG:</label>
+        <select id="mpg" name="mpg" required>
+            <option value="">Select MPG</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+        </select>
+
+        <label for="engineSize">Engine Size:</label>
+        <select id="engineSize" name="engineSize" required>
+            <option value="">Select Engine Size</option>
+            <option value="1.0">1.0</option>
+            <option value="1.5">1.5</option>
+            <option value="2.0">2.0</option>
+            <option value="2.5">2.5</option>
+            <option value="3.0">3.0</option>
+        </select>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
